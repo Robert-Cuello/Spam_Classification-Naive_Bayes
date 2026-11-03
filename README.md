@@ -21,8 +21,8 @@ The project covers the complete machine learning workflow:
 
 The dataset used in this project was constructed by combining two publicly available datasets hosted on Kaggle:
 
-* **Spam email Dataset** — by _w1998. The dataset originally contained **5,728 emails**.
-* **Spam-Ham Mail Classification Dataset** — by Yuvanshu Dadhich and Chetan Pemmasani. The dataset originally contained **9,354 emails**.
+* **[Spam email Dataset]{https://www.kaggle.com/datasets/jackksoncsie/spam-email-dataset}** — by _w1998. The dataset originally contained **5,728 emails**.
+* **[Spam-Ham Mail Classification Dataset]{https://www.kaggle.com/datasets/yuvanshudadhich/spam-ham-dataset}** — by Yuvanshu Dadhich and Chetan Pemmasani. The dataset originally contained **9,354 emails**.
 
 After loading both datasets, they were harmonized and combined into a single dataset containing **15,082 emails**. Before cleaning, there were **3,210 duplicate entries** and no missing values.
 
@@ -201,7 +201,13 @@ git clone https://github.com/Robert-Cuello/Spam_Classification-Naive_Bayes.git
 cd Spam_Classification-Naive_Bayes
 ```
 
-### 2. Create the environment
+### 2. Download the datasets
+
+Download the datasets from Kaggle, and place them in `data/raw`:
+* `emails.csv`
+* `spam_ham_dataset,csv`
+
+### 3. Create the environment
 
 Using Conda:
 
@@ -210,7 +216,7 @@ conda env create -f environment.yml
 conda activate spam_classifier
 ```
 
-### 3. Run the project
+### 4. Run the project
 
 The complete pipeline can be executed with:
 
