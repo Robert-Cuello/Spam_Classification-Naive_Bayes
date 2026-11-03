@@ -27,10 +27,6 @@ def preparing_data(clean_html_urls=False):
     # EXPLORATORY  DATA ANALYSIS (EDA)
 
     ## Calculating frequency of ham and spam emails
-    spam_count = df['spam'].value_counts()
-    spam_perc = df['spam'].value_counts(normalize=True) * 100
-    print(f"Ham emails: {spam_count[0]} ({spam_perc[0]:.2f}%), Spam emails: {spam_count[1]} ({spam_perc[1]:.2f})%. Total emails: {len(df)}")
-
     print('\nDuplicate entries and null values before cleaning:')
     missing_values = df.isnull().sum()
     print(f"Missing values:\n{missing_values}")
@@ -46,6 +42,10 @@ def preparing_data(clean_html_urls=False):
     print(f"Duplicate entries: {duplicate_entries}")
     missing_values = df.isnull().sum()
     print(f"Missing values:\n{missing_values}")
+
+    spam_count = df['spam'].value_counts()
+    spam_perc = df['spam'].value_counts(normalize=True) * 100
+    print(f"Ham emails: {spam_count[0]} ({spam_perc[0]:.2f}%), Spam emails: {spam_count[1]} ({spam_perc[1]:.2f})%. Total emails: {len(df)}")
 
     ## Cleaning HTML and URLs traces from the email text
     def cleaning_html_and_urls(text):
